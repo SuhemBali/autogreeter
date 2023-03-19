@@ -1,0 +1,617 @@
+@font-face {
+  font-family: "SamsungOne";
+  font-style: normal;
+  font-weight: 400;
+  src: local("SamsungOne-400");
+  src: url(https://cdn.samsung.com/etc/designs/smg/global/fonts/SamsungOne-400.eot);
+  src: url(https://cdn.samsung.com/etc/designs/smg/global/fonts/SamsungOne-400.eot?#iefix) format("embedded-opentype"), url(https://cdn.samsung.com/etc/designs/smg/global/fonts/SamsungOne-400.woff2) format("woff2"), url(https://cdn.samsung.com/etc/designs/smg/global/fonts/SamsungOne-400.woff) format("woff");
+}
+@font-face {
+  font-family: "SamsungOne";
+  font-style: normal;
+  font-weight: 700;
+  src: local("SamsungOne-700");
+  src: url(https://cdn.samsung.com/etc/designs/smg/global/fonts/SamsungOne-700.eot);
+  src: url(https://cdn.samsung.com/etc/designs/smg/global/fonts/SamsungOne-700.eot?#iefix) format("embedded-opentype"), url(https://cdn.samsung.com/etc/designs/smg/global/fonts/SamsungOne-700.woff2) format("woff2"), url(https://cdn.samsung.com/etc/designs/smg/global/fonts/SamsungOne-700.woff) format("woff");
+}
+@font-face {
+  font-family: "Samsung Sharp Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Samsung Sharp Sans Bold");
+  src: url(https://cdn.samsung.com/etc/designs/smg/global/fonts/SamsungSharpSansBd.eot);
+  src: url(https://cdn.samsung.com/etc/designs/smg/global/fonts/SamsungSharpSansBd.eot?#iefix) format("embedded-opentype"), url(https://cdn.samsung.com/etc/designs/smg/global/fonts/SamsungSharpSansBd.woff) format("woff");
+}
+@font-face {
+  font-family: "SamsungOne";
+  font-style: normal;
+  font-weight: 400;
+  src: local("SamsungOne-400");
+  src: url(https://cdn.samsung.com/etc/designs/smg/global/fonts/SamsungOne-400.eot);
+  src: url(https://cdn.samsung.com/etc/designs/smg/global/fonts/SamsungOne-400.eot?#iefix) format("embedded-opentype"), url(https://cdn.samsung.com/etc/designs/smg/global/fonts/SamsungOne-400.woff2) format("woff2"), url(https://cdn.samsung.com/etc/designs/smg/global/fonts/SamsungOne-400.woff) format("woff");
+}
+@font-face {
+  font-family: "SamsungOne";
+  font-style: normal;
+  font-weight: 700;
+  src: local("SamsungOne-700");
+  src: url(https://cdn.samsung.com/etc/designs/smg/global/fonts/SamsungOne-700.eot);
+  src: url(https://cdn.samsung.com/etc/designs/smg/global/fonts/SamsungOne-700.eot?#iefix) format("embedded-opentype"), url(https://cdn.samsung.com/etc/designs/smg/global/fonts/SamsungOne-700.woff2) format("woff2"), url(https://cdn.samsung.com/etc/designs/smg/global/fonts/SamsungOne-700.woff) format("woff");
+}
+@font-face {
+  font-family: "Samsung Sharp Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Samsung Sharp Sans Bold");
+  src: url(https://cdn.samsung.com/etc/designs/smg/global/fonts/SamsungSharpSansBd.eot);
+  src: url(https://cdn.samsung.com/etc/designs/smg/global/fonts/SamsungSharpSansBd.eot?#iefix) format("embedded-opentype"), url(https://cdn.samsung.com/etc/designs/smg/global/fonts/SamsungSharpSansBd.woff) format("woff");
+}
+@font-face {
+  font-family: "SamsungOne";
+  font-style: normal;
+  font-weight: 400;
+  src: local("SamsungOne-400");
+  src: url(https://cdn.samsung.com/etc/designs/smg/global/fonts/SamsungOne-400.eot);
+  src: url(https://cdn.samsung.com/etc/designs/smg/global/fonts/SamsungOne-400.eot?#iefix) format("embedded-opentype"), url(https://cdn.samsung.com/etc/designs/smg/global/fonts/SamsungOne-400.woff2) format("woff2"), url(https://cdn.samsung.com/etc/designs/smg/global/fonts/SamsungOne-400.woff) format("woff");
+}
+@font-face {
+  font-family: "SamsungOne";
+  font-style: normal;
+  font-weight: 700;
+  src: local("SamsungOne-700");
+  src: url(https://cdn.samsung.com/etc/designs/smg/global/fonts/SamsungOne-700.eot);
+  src: url(https://cdn.samsung.com/etc/designs/smg/global/fonts/SamsungOne-700.eot?#iefix) format("embedded-opentype"), url(https://cdn.samsung.com/etc/designs/smg/global/fonts/SamsungOne-700.woff2) format("woff2"), url(https://cdn.samsung.com/etc/designs/smg/global/fonts/SamsungOne-700.woff) format("woff");
+}
+@font-face {
+  font-family: "Samsung Sharp Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Samsung Sharp Sans Bold");
+  src: url(https://cdn.samsung.com/etc/designs/smg/global/fonts/SamsungSharpSansBd.eot);
+  src: url(https://cdn.samsung.com/etc/designs/smg/global/fonts/SamsungSharpSansBd.eot?#iefix) format("embedded-opentype"), url(https://cdn.samsung.com/etc/designs/smg/global/fonts/SamsungSharpSansBd.woff) format("woff");
+}
+html {
+  font-family: "SamsungOne", Arial, Helvetica, sans-serif;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  /**
+    //? HTML ROOT RULES
+    //! 1. Set BORDER-BOX for inheritance
+    //! 2. Avoid 300ms click delay on touch devices that support the 'touch-action' CSS proprty
+    //! 3. Prevent adjustments of font-size after orientation changes in IE, on Windows Phone and iOS
+    //! 4. Setting @viewport causes scrollbars to overlap content in IE11 and Edge, so we force a non-overlapping, non-auto-hidding srcollbar to counteract.
+    //! 5. Change the default tap highlight color to be completely transparent in iOS
+    **/
+  box-sizing: border-box;
+  touch-action: manipulation;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  height: -webkit-fill-available;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+html body {
+  margin: 0;
+  padding: 0;
+  height: -webkit-fill-available;
+}
+html article,
+html aside,
+html details,
+html figcaption,
+html figure,
+html footer,
+html header,
+html hgroup,
+html main,
+html menu,
+html nav,
+html section,
+html summary {
+  display: block;
+}
+html .blue_text {
+  color: #2c04bc;
+}
+html .proceeding_cta {
+  padding: 1rem 4rem;
+  border-radius: 3.75rem;
+  font-size: 1.5rem;
+  color: #ffffff;
+  background-color: transparent;
+  text-decoration: none;
+  margin: 5rem 1rem;
+  border: 2px solid #ffffff;
+  font-family: "SamsungOne", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+}
+html .generate_greetings_cta {
+  padding: 1.5rem 2rem;
+  width: 100%;
+  border-radius: 3.75rem;
+  font-size: 2rem;
+  color: #2c04bc;
+  font-family: "SamsungOne", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  margin: 5rem auto;
+  background-color: #ffffff;
+  border: 2px solid #ffffff;
+  cursor: pointer;
+}
+html .rewards_cta {
+  padding: 1rem;
+  border-radius: 3.75rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-family: "SamsungOne", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  color: #2c04bc;
+  background-color: #cee885;
+  border: none;
+  cursor: pointer;
+}
+html .input {
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+}
+html .input .question {
+  color: #2c04bc;
+  font-family: "SamsungOne", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 1.9rem;
+}
+html .input input {
+  border: none;
+  border-bottom: 2px solid #2c04bc;
+  background-color: transparent;
+  padding: 1rem 2rem;
+  color: #2c04bc;
+  font-family: "SamsungOne", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 1.9rem;
+  width: 80%;
+}
+html .input input::-moz-placeholder {
+  font-size: 1.5rem;
+  color: rgba(44, 4, 190, 0.2509803922);
+}
+html .input input::placeholder {
+  font-size: 1.5rem;
+  color: rgba(44, 4, 190, 0.2509803922);
+}
+html .input input::-moz-selection {
+  border: none !important;
+}
+html .input input::selection, html .input input:focus {
+  border: none !important;
+}
+html .input .range_list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+html .input input[type=range] {
+  -webkit-appearance: none;
+  background-color: #ffffff;
+  height: 1px !important;
+  padding: 0;
+  width: 80%;
+  position: relative;
+  cursor: ew-resize;
+}
+html .input input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: #ffffff;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: relative;
+  z-index: 100;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 20;
+  background-color: rgba(0, 0, 1, 0.4431372549);
+}
+
+.nav_drawer {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 25;
+  height: -webkit-fill-available;
+  background-color: #cee885;
+}
+.nav_drawer .close_cta {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+.nav_drawer .close_cta img {
+  width: 2.5rem;
+}
+.nav_drawer .nav_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: auto 2rem;
+}
+.nav_drawer .nav_content .nav_title {
+  padding: 0;
+  margin: 0.5rem auto;
+  font-family: "Samsung Sharp Sans", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+.nav_drawer .nav_content .nav_title .title {
+  text-transform: uppercase;
+  color: #2c04bc;
+  font-size: 2rem;
+}
+.nav_drawer .nav_content .nav_desc {
+  text-align: center;
+}
+.nav_drawer .nav_content .nav_desc p {
+  color: #2c04bc;
+  font-size: 1.5rem;
+  font-family: "Samsung Sharp Sans", Arial, Helvetica, sans-serif;
+}
+.nav_drawer .nav_content .voucher_code_section {
+  background-color: #2c04bc;
+  border-radius: 2rem;
+  box-sizing: border-box;
+  height: 45rem;
+  width: 100%;
+  margin: 0.5em;
+  overflow: auto;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+  overflow: -moz-scrollbars-none;
+}
+.nav_drawer .nav_content .voucher_code_section::-webkit-scrollbar {
+  display: none;
+}
+.nav_drawer .nav_content .voucher_code_section .voucher_list {
+  list-style-type: none;
+  margin: 2rem auto;
+  padding: 0;
+}
+.nav_drawer .nav_content .voucher_code_section .voucher_list .voucher {
+  background-color: transparent;
+  margin: 0 2rem;
+  padding: 1.5rem 0;
+  border-top: 2px solid #ffffff;
+}
+.nav_drawer .nav_content .voucher_code_section .voucher_list .voucher:last-child {
+  border-bottom: 2px solid #ffffff;
+}
+.nav_drawer .nav_content .voucher_code_section .voucher_list .voucher .voucher_item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav_drawer .nav_content .voucher_code_section .voucher_list .voucher .voucher_item .product_name P {
+  font-family: "Samsung Sharp Sans", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin: 0.2rem;
+}
+.nav_drawer .nav_content .voucher_code_section .voucher_list .voucher .voucher_item .product_voucher {
+  text-transform: uppercase;
+  font-family: "Samsung Sharp Sans", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #cee885;
+}
+.nav_drawer .nav_content .voucher_code_section .voucher_list .voucher .voucher_item .share-cta button {
+  padding: 1rem;
+  border-radius: 3.75rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-family: "SamsungOne", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  color: #2c04bc;
+  background-color: #cee885;
+  border: none;
+  cursor: pointer;
+}
+
+.greetings {
+  height: 100%;
+  height: -webkit-fill-available;
+}
+.greetings section {
+  padding: 1rem 3.5rem;
+}
+.greetings section .page_title {
+  font-size: 1.5rem;
+  position: absolute;
+  top: 1rem;
+  padding: 0 10rem;
+  font-family: "Samsung Sharp Sans", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+.greetings section .greeting_card_area {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: space-between;
+  margin: 1rem auto;
+}
+.greetings section .greeting_card_area .greeting_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 1rem;
+  height: 100%;
+  overflow: auto;
+  background-color: #cee885;
+  position: relative;
+}
+.greetings section .greeting_card_area .greeting_card p {
+  font-family: "SamsungOne", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 1.75rem;
+  line-height: 2.5rem;
+  color: #2c04bc;
+}
+.greetings section .greeting_card_area .greeting_card::before {
+  width: 80%;
+  height: 100%;
+  background-color: #ffc248;
+  transform: rotate(10deg);
+}
+.greetings section .greetings_actions {
+  width: 100%;
+  margin: 2rem auto 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.greetings section .greetings_actions .share,
+.greetings section .greetings_actions .try_another {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.greetings section .greetings_actions .share img,
+.greetings section .greetings_actions .try_another img {
+  width: 2.5rem;
+  padding-right: 1rem;
+}
+.greetings section .greetings_actions .share p,
+.greetings section .greetings_actions .try_another p {
+  font-size: 1.5rem;
+}
+.greetings section .start_over {
+  font-family: "Samsung Sharp Sans", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin: 2rem auto;
+}
+.greetings section .start_over a {
+  text-decoration: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+.greetings section nav {
+  padding: 1rem 0;
+}
+
+main {
+  position: relative;
+  flex: 1;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+main aside {
+  cursor: pointer;
+}
+main aside .close_cta {
+  width: 3rem;
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  cursor: pointer;
+}
+main aside .hamburger {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  z-index: 10;
+  width: 5rem;
+}
+main section {
+  scroll-snap-align: start;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+main section .content {
+  margin: 2rem 3rem 1rem;
+  font-family: "Samsung Sharp Sans", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  position: relative;
+}
+main section .content p {
+  font-family: "SamsungOne", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+main section .content .scroll_text {
+  margin-top: 5rem;
+}
+main section .content .box {
+  position: absolute;
+  bottom: -8rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform: rotate(-180deg);
+}
+main section .content .box span {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: animate 2s infinite;
+}
+main section .content .box span:nth-child(2) {
+  animation-delay: -0.2s;
+}
+main section .content .box span:nth-child(3) {
+  animation-delay: -0.4s;
+}
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
+  }
+}
+main section .content .integration_samsung_prods {
+  padding: 2rem;
+}
+main section .content .integration_samsung_prods label {
+  font-family: "SamsungOne", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  position: relative;
+  padding-right: 1rem;
+  cursor: pointer;
+}
+main section .content .integration_samsung_prods input[type=checkbox] {
+  padding: 0;
+  height: initial;
+  width: initial;
+  margin-bottom: 0;
+  display: none;
+  cursor: pointer;
+}
+main section .content .integration_samsung_prods input[type=checkbox]::before {
+  content: "";
+  border: 2px solid #ffffff !important;
+  padding: 10px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-right: 5px;
+}
+main section .content .integration_samsung_prods input[type=checkbox]:checked + label:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: -2rem;
+  width: 6px;
+  height: 14px;
+  border: 2px solid #ffffff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+main section nav {
+  width: 100%;
+  height: 5%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+}
+main section nav img {
+  width: 50%;
+}
+main section:nth-of-type(1) {
+  background-color: #2c04bc;
+  color: #ffffff;
+}
+main section:nth-of-type(1) nav {
+  background-color: #ffc248;
+}
+main section:nth-of-type(2) {
+  background-color: #ffc248;
+  color: #ffffff;
+}
+main section:nth-of-type(2) nav {
+  background-color: #cee885;
+}
+main section:nth-of-type(3) {
+  background-color: #cee885;
+  color: #ffffff;
+}
+main section:nth-of-type(3) nav {
+  background-color: #fd8a8a;
+}
+main section:nth-of-type(4) {
+  background-color: #fd8a8a;
+  color: #ffffff;
+}
+main section:nth-of-type(4) nav {
+  background-color: #2c04bc;
+}
+main section:nth-of-type(5) {
+  background-color: #2c04bc;
+  color: #ffffff;
+  height: 100vh !important;
+}
+main section:nth-of-type(5) nav {
+  background-color: #2c04bc;
+}
+
+@media (min-width: 768px) {
+  .generate_greetings_cta {
+    width: 50% !important;
+  }
+  .nav_drawer {
+    width: 35%;
+  }
+  .greetings section .page_title {
+    font-size: 3rem;
+  }
+  .greetings section .greeting_card_area {
+    width: 30%;
+  }
+  .greetings section .greetings_actions {
+    width: 50%;
+  }
+  section .content {
+    width: 50%;
+  }
+  section .content h1 {
+    font-size: 3rem;
+  }
+  section .content p {
+    font-size: 2rem;
+  }
+}/*# sourceMappingURL=main.css.map */
