@@ -16,11 +16,7 @@ export const Homepage = () => {
   const [greeting, setGreeting] = useState("");
 
   const navigate = useNavigate()
-
-  const [navbar, setNavbar] = useState(false)
-  const toggleNav = () => {
-    setNavbar((current) => !current);
-  }
+  const [isNavbarOpen, setIsNavbarOpen] = useState(false);
 
   const namePage = useRef({});
   const timePage = useRef({});
@@ -37,8 +33,8 @@ export const Homepage = () => {
   const initConnection = async (event) => {
     navigate('/greetings', { greeting })
     event.preventDefault();
-    // const API_KEY = process.env.REACT_APP_API_KEY;
-    const API_KEY = "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";
+    const API_KEY = process.env.REACT_APP_API_KEY;
+    
     const API_ENDPOINT = `https://api.openai.com/v1/completions`;
 
     try {
@@ -134,8 +130,8 @@ export const Homepage = () => {
 
       <main>
         {/* <!-- NAVBAR CODE STARTS HERE --> */}
-        {navbar && <Navbar />}
-        <aside onClick={() => toggleNav()}>
+        {isNavbarOpen && <Navbar isNavbarOpen={isNavbarOpen} setIsNavbarOpen={setIsNavbarOpen}/>}
+        <aside onClick={() => setIsNavbarOpen(!isNavbarOpen)}>
             <img className="hamburger" src="https://samsung-crm.com/mena/Common/autogreet/hamburger.png" alt="" />
         </aside>
         {/* <!-- NAVBAR CODE ENDS HERE --> */}
@@ -236,10 +232,6 @@ export const Homepage = () => {
                 <button type="submit" onClick={initConnection} className="generate_greetings_cta">Generate Greeting</button>
                
                  
-                  
-                {/* <a href="./greetings.html">
-                    <button className="generate_greetings_cta">Generate Greeting</button>
-                </a> */}
             </div>
             <nav>
                 <div className="connect_smarter"><img src="https://samsung-crm.com/mena/Common/autogreet/connect-smarter.png" alt="" /></div>
