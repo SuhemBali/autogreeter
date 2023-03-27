@@ -220,6 +220,7 @@ html .input input[type=range]::-webkit-slider-thumb {
   height: 100%;
   position: absolute;
   z-index: 20;
+  filter: blur(1rem);
   background-color: rgba(0, 0, 1, 0.4431372549);
 }
 
