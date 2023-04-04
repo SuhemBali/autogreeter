@@ -134,10 +134,6 @@ export const Homepage = () => {
     }
   }
 
-  const getVal = () => {
-    console.log(data.tone)
-  }
-
 
   return (
     <>
@@ -234,7 +230,6 @@ export const Homepage = () => {
                         <img src="https://i.ibb.co/v48rbLP/Asset-41.png" alt="Casual" />
                         <img src="https://i.ibb.co/JFW7SvV/Asset-42.png" alt="Funny" />
                       </div>
-                      <button onClick={getVal}>Get Value</button>
                 </div>
                 <div className="integration_samsung_prods">
                     <div className="c-checkbox c-checkbox--svg">

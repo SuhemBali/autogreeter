@@ -40,12 +40,12 @@ export const GreetingsPage = (initConnection) => {
 
     return (
         <>
-        {isNavbarOpen && <Navbar isNavbarOpen={isNavbarOpen} setIsNavbarOpen={setIsNavbarOpen}/>}
             <main className="greetings">
             {/* <!-- NAVBAR CODE STARTS HERE --> */}
+            {/* {isNavbarOpen && <Navbar isNavbarOpen={isNavbarOpen} setIsNavbarOpen={setIsNavbarOpen}/>}
             <aside onClick={() => setIsNavbarOpen(!isNavbarOpen)}>
                 <img className="hamburger" src="https://i.ibb.co/K9VXZQj/Asset-25.png" alt="Go Here To View Rewards" />
-            </aside>
+            </aside> */}
             {/* <!-- NAVBAR CODE ENDS HERE --> */}
 
             {/* <!-- PAGE 1 CODE : START --> */}
